@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">NanoTrack</string>
+
+    <string-array name="activar">
+        <item>Activar</item>
+        <item>Desactivar</item>
+    </string-array>
+
 </resources>
