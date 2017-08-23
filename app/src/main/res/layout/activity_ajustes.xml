@@ -22,18 +22,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="Localizar" />
+                android:text="# de repetición\nalarma" />
+            <EditText
+                android:id="@+id/ETRepeticionAlarma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:inputType="number" />
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end">
                 <Button
-                    android:id="@+id/localizar"
+                    android:id="@+id/repAlarma"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:text="Enviar" />
+                    android:text="Ajustar" />
             </RelativeLayout>
         </LinearLayout>
         <LinearLayout
@@ -44,44 +50,72 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="Bloquear/\nDesbloquear" />
+                android:text="Distancia recorrida\nautorizada" />
+            <EditText
+                android:id="@+id/ETDistanciaRecorrida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="en metros"
+                android:inputType="number" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end">
+                <Button
+                    android:id="@+id/distRecorrida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="Ajustar" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Velocidad máx\nautorizada" />
+            <EditText
+                android:id="@+id/ETVelocidadMax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="en Km/h"
+                android:inputType="number" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end">
+
+                <Button
+                    android:id="@+id/velocidadMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="Ajustar" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Sensibilidad de\nsensor de impacto" />
             <Spinner
-                android:id="@+id/spinnerBloqueo"
+                android:id="@+id/spinnerSensibilidad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:drawSelectorOnTop="true"
-                android:entries="@array/activar"
-                />
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end">
-                <Button
-                    android:id="@+id/bloqueo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:text="Enviar" />
-            </RelativeLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="Modo estacionamiento" />
-            <Spinner
-                android:id="@+id/spinnerModoEst"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:drawSelectorOnTop="true"
-                android:entries="@array/activar"
+                android:entries="@array/sensibilidad"
                 />
 
             <RelativeLayout
@@ -90,12 +124,12 @@
                 android:layout_gravity="end">
 
                 <Button
-                    android:id="@+id/modoEst"
+                    android:id="@+id/sensibilidad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:text="Enviar" />
+                    android:text="Ajustar" />
             </RelativeLayout>
         </LinearLayout>
         <LinearLayout
@@ -106,7 +140,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="Estado" />
+                android:text="Tiempo de rastreo\nprendido" />
+            <EditText
+                android:id="@+id/ETTiempoRastreoPrendido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="en segundos"
+                android:inputType="number" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -114,12 +154,12 @@
                 android:layout_gravity="end">
 
                 <Button
-                    android:id="@+id/estado"
+                    android:id="@+id/tiempoRastreoPrendido"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:text="Enviar" />
+                    android:text="Ajustar" />
             </RelativeLayout>
         </LinearLayout>
         <LinearLayout
@@ -130,7 +170,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="Alarmas" />
+                android:text="Tiempo de rastreo\napagado" />
+            <EditText
+                android:id="@+id/ETTiempoRastreoApagado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="en minutos"
+                android:inputType="number" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -138,12 +184,12 @@
                 android:layout_gravity="end">
 
                 <Button
-                    android:id="@+id/alarmas"
+                    android:id="@+id/tiempoRastreoApagado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:text="Ir" />
+                    android:text="Ajustar" />
             </RelativeLayout>
         </LinearLayout>
         <LinearLayout
@@ -154,7 +200,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="Rastreo" />
+                android:text="Repetición\npuntos de rastreo" />
+            <EditText
+                android:id="@+id/ETRepeticionPuntos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:inputType="number" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -162,12 +214,12 @@
                 android:layout_gravity="end">
 
                 <Button
-                    android:id="@+id/rastreo"
+                    android:id="@+id/repeticionPuntos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:text="Ir" />
+                    android:text="Ajustar" />
             </RelativeLayout>
         </LinearLayout>
         <LinearLayout
@@ -178,31 +230,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="Ajustes" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end">
-
-                <Button
-                    android:id="@+id/ajustes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:text="Ir" />
-            </RelativeLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
+                android:text="Ángulo\npuntos de rastreo" />
+            <EditText
+                android:id="@+id/ETangulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="Reset tracker" />
+                android:hint="en grados"
+                android:inputType="number" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -210,13 +244,14 @@
                 android:layout_gravity="end">
 
                 <Button
-                    android:id="@+id/reset"
+                    android:id="@+id/angulo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:text="Reset" />
+                    android:text="Ajustar" />
             </RelativeLayout>
         </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>

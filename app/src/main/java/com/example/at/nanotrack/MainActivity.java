@@ -57,7 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intentRastreo);
                 break;
             case R.id.ajustes:
-
+                Intent intentAjustes = new Intent(this, Ajustes.class);
+                startActivity(intentAjustes);
                 break;
             case R.id.reset:
 
