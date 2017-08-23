@@ -5,5 +5,9 @@
         <item>Activar</item>
         <item>Desactivar</item>
     </string-array>
+    <string-array name="limitado">
+        <item>Limitado</item>
+        <item>Ilimitado</item>
+    </string-array>
 
 </resources>
