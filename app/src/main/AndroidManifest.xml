@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.at.nanotrack">
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <application
         android:allowBackup="true"
@@ -18,7 +22,16 @@
         </activity>
         <activity android:name=".Alarma" />
         <activity android:name=".Rastreo" />
-        <activity android:name=".Ajustes"></activity>
+        <activity android:name=".Ajustes">
+
+        </activity>
+
+        <receiver android:name=".SmsBroadcastReceiver" android:exported="true" >
+            <intent-filter android:priority="999" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>
